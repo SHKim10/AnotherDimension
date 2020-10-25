@@ -14,10 +14,15 @@ public class Tester{
                 };
     int[] D = {1, 3, 5};
     int[] E = {};
-    int[] F = {2, -4, 10};
+    int[] F = {10, -4, 2};
+    int[] G = {9, 9, -1, 7};
 
     System.out.println(ArrayOps.sum(D));  //9
     System.out.println(ArrayOps.sum(E));  //0
     System.out.println(ArrayOps.sum(F));  //8
+
+    System.out.println(ArrayOps.largest(D));  //5
+    System.out.println(ArrayOps.largest(F));  //10
+    System.out.println(ArrayOps.largest(G));  //9
   }
 }
