@@ -36,6 +36,8 @@ public class Tester{
                  {3, 3, 3}};
     int[][] N = {{2, 2, 2},
                  {2, 2, 2}};
+    int[][] O = {{2, 4, 2},
+                 {2, 2, 2}};
 
     System.out.println(ArrayOps.sum(A));  //9
     System.out.println(ArrayOps.sum(B));  //0
@@ -75,6 +77,11 @@ public class Tester{
     System.out.println(ArrayOps.isColMagic(L));  //false
     System.out.println(ArrayOps.isColMagic(M));  //true
     System.out.println(ArrayOps.isColMagic(N));  //true
-
+    System.out.println(ArrayOps.isLocationMagic(E, 1, 1));  //true: 15 == 15
+    System.out.println(ArrayOps.isLocationMagic(F, 0, 2));  //false: 12 != 16
+    System.out.println(ArrayOps.isLocationMagic(G, 2, 2));  //true: -3 == -3
+    System.out.println(ArrayOps.isLocationMagic(H, 3, 0));  //false: -9 != -17
+    System.out.println(ArrayOps.isLocationMagic(O, 0, 1));  //false: 8 != 6
+    System.out.println(ArrayOps.isLocationMagic(O, 1, 1));  //true: 6 == 6
   }
 }

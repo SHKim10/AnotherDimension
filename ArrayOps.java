@@ -73,10 +73,17 @@ public class ArrayOps{
     int first = total[0];
     boolean magic = false;
     for (int i = 0; i < matrix.length; i++){
-      if (total[i] != first){
-        magic = false;
-      } else magic = true;
+      if (total[i] != first) magic = false;
+      else magic = true;
     }
+    return magic;
+  }
+  public static boolean isLocationMagic(int[][] matrix, int row, int col){
+    int[] arrRow = ArrayOps.sumRows(matrix);
+    int[] arrCol = ArrayOps.sumCols(matrix);
+    boolean magic = false;
+    if (arrRow[row] != arrRow [col]) magic = false;
+    else magic = true;
     return magic;
   }
 }
