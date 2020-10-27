@@ -1,10 +1,10 @@
 public class ArrayOps{
   public static int sum(int[] arr){
-    int add = 0;
+    int rowTotal = 0;
     for (int i = 0; i < arr.length; i++){
-      add += arr[i];
+      rowTotal += arr[i];
     }
-    return add;
+    return rowTotal;
   }
   public static int largest(int[] arr){
     int biggest = 0;
@@ -22,13 +22,13 @@ public class ArrayOps{
     return arr[arr.length-1];
   }
   public static int[] sumRows(int[][] matrix){
-    int[] result = new int[matrix.length];
+    int[] allRows = new int[matrix.length];
     for (int i = 0; i < matrix.length; i++){
       int total = 0;
       total += ArrayOps.sum(matrix[i]);
-      result[i] = total;
+      allRows[i] = total;
     }
-    return result;
+    return allRows;
   }
   public static int[] largestInRows(int[][] matrix){
     int[] result = new int[matrix.length];
@@ -40,12 +40,21 @@ public class ArrayOps{
     return result;
   }
   public static int sum(int[][] arr){
-    int add = 0;
+    int entireArr = 0;
     for (int i = 0; i < arr.length; i++){
       for (int j = 0; j < arr[i].length; j++){
-        add += arr[i][j];
+        entireArr += arr[i][j];
       }
     }
-    return add;
+    return entireArr;
+  }
+  public static int[] sumCols(int[][] matrix) {
+    int[] allCols = new int[matrix[0].length];
+    for(int i = 0; i < matrix[0].length; i++){
+      for(int j = 0; j < matrix.length; j++){
+        allCols[i] += matrix[j][i];
+      }
+    }
+    return allCols;
   }
 }
