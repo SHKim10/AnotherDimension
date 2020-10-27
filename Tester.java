@@ -70,5 +70,11 @@ public class Tester{
     System.out.println(ArrayOps.isRowMagic(L));  //true
     System.out.println(ArrayOps.isRowMagic(M));  //false
     System.out.println(ArrayOps.isRowMagic(N));  //true
+    System.out.println(ArrayOps.isColMagic(E));  //false
+    System.out.println(ArrayOps.isColMagic(F));  //false
+    System.out.println(ArrayOps.isColMagic(L));  //false
+    System.out.println(ArrayOps.isColMagic(M));  //true
+    System.out.println(ArrayOps.isColMagic(N));  //true
+
   }
 }
