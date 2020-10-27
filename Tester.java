@@ -44,6 +44,7 @@ public class Tester{
     System.out.println(ArrayOps.largest(A));  //5
     System.out.println(ArrayOps.largest(C));  //10
     System.out.println(ArrayOps.largest(D));  //9
+    System.out.println(Arrays.toString(ArrayOps.sumRows(E)));  //[6, 15, 24]
     System.out.println(Arrays.toString(ArrayOps.sumRows(F)));  //[12, 8, -14]
     System.out.println(Arrays.toString(ArrayOps.sumRows(G)));  //[-1, 18, -3]
     System.out.println(Arrays.toString(ArrayOps.sumRows(H)));  //[-8, 8, 4, -9]
@@ -64,5 +65,10 @@ public class Tester{
     System.out.println(Arrays.toString(ArrayOps.sumCols(F)));  //[3, -4, 16, -9]
     System.out.println(Arrays.toString(ArrayOps.sumCols(G)));  //[-3, 22, -3, -2]
     System.out.println(Arrays.toString(ArrayOps.sumCols(H)));  //[-17, 12]
+    System.out.println(ArrayOps.isRowMagic(E));  //false
+    System.out.println(ArrayOps.isRowMagic(F));  //false
+    System.out.println(ArrayOps.isRowMagic(L));  //true
+    System.out.println(ArrayOps.isRowMagic(M));  //false
+    System.out.println(ArrayOps.isRowMagic(N));  //true
   }
 }
